@@ -112,7 +112,7 @@ BootStrapClassLoader, ExtClasssLoader, AppClassLoader
 
 ### 总结图
 
-
+<img src="https://github.com/oliverschen/Java-Summarize/blob/main/images/JVM.png" style="zoom:50%" />
 
 ### 资料
 
