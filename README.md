@@ -191,11 +191,85 @@ Linux 2.5.44内核中引入,2.6内核正式引入,可被用于代替 POSIX selec
 
 #### 异步I/O
 
-异步 IO **真正实现**了 IO 全流程的非阻塞。用户进程发出系统调用后立即返回，内核等待数据准备完成，然后将
-
-数据拷贝到用户进程缓冲区，然后发送信号告诉用户进程 IO 操作执行完毕「与 SIGIO 相比，一个是发送信号告
-
-诉用户进程数据准备完毕，一个是 IO执行完毕」。
+异步 IO **真正实现**了 IO 全流程的非阻塞。用户进程发出系统调用后立即返回，内核等待数据准备完成，然后将数据拷贝到用户进程缓冲区，然后发送信号告诉用户进程 IO 操作执行完毕「与 SIGIO 相比，一个是发送信号告诉用户进程数据准备完毕，一个是 IO 执行完毕」。
 
 ### Netty
+
+Netty 提供**异步**的、**事件驱动**的网络应用程序框架和工具，用以快速开发高性能、高可靠性的网络服务器和客户端程序。也就是说，Netty 是一个**基于 NIO** 的客户，服务器端编程框架，使用Netty 可以确保你快速和简单的开发出一个网络应用，Netty相当简化和流线化了网络应用的编程开发过程，例如，TCP和UDP的socket服务开发。
+
+#### 特性
+
+高性能协议服务器
+
+高吞吐，低延迟，低开销，零拷贝，可扩容，松耦合: 网络和业务逻辑分离，使用方便、可维护性好
+
+#### 基本概念
+
+##### Channel
+
+通道，Java NIO 中的基础概念,代表一个打开的连接,可执行读取/写入 IO 操作。Netty 对 Channel 的所有 IO 操作都是非阻塞的。
+
+##### ChannelFuture
+
+Java 的 Future 接口，只能查询操作的完成情况, 或者阻塞当前线程等待操作完成。Netty 封装一个 ChannelFuture 接口。可以将回调方法传给 ChannelFuture，在操作完成时自动执行。
+
+##### Event&Handler
+
+Netty 基于事件驱动，事件和处理器可以关联到入站和出站数据流。
+
+##### Encoder&Decoder
+
+处理网络 IO 时，需要进行序列化和反序列化, 转换 Java 对象与字节流。对入站数据进行解码, 基类是 ByteToMessageDecoder。对出站数据进行编码, 基类是 MessageToByteEncoder。 
+
+##### ChannelPipeline 
+
+数据处理管道就是事件处理器链。有顺序、同一 Channel 的出站处理器和入站处理器在同一个列表中。
+
+#### 优化
+
+1. 不要阻塞 EventLoop
+
+2. 系统参数优化
+
+> ulimit -a /proc/sys/net/ipv4/tcp_fin_timeout, TcpTimedWaitDelay
+
+3. 缓冲区优化
+
+> SO_RCVBUF/SO_SNDBUF/SO_BACKLOG/ REUSEXXX
+
+4. 心跳频率周期优化
+
+> 心跳机制与断线重连
+
+5. 内存与 ByteBuffer 优化
+
+> DirectBuffer与HeapBuffer
+
+6. 其他优化
+
+> -ioRatio
+>
+> -Watermark
+>
+> -TrafficShaping
+
+#### 应用
+
+实现 API 网关
+
+##### 常见网关
+
+zuul ,zuul2 ,Spring Cloud Gateway ,openResty ,Kong 
+
+### 总结图
+
+<img src="https://github.com/oliverschen/Java-Summarize/blob/main/images/NIO.png" style="zoom:50%" />
+
+### 资料
+
+[Essential Netty in Action 《Netty 实战(精髓)》](https://waylau.gitbooks.io/essential-netty-in-action/content/GETTING%20STARTED/Asynchronous%20and%20Event%20Driven.html)
+
+
+
+---
 
