@@ -5,7 +5,7 @@ Java ☃️总结
 
 ---
 
-## JVM
+## ☕️JVM
 
 ### 介绍 Java 
 
@@ -126,7 +126,7 @@ BootStrapClassLoader, ExtClasssLoader, AppClassLoader
 
 ---
 
-## NIO
+## ✈️NIO
 
 ### Java Socket编程
 
@@ -273,7 +273,7 @@ zuul ,zuul2 ,Spring Cloud Gateway ,openResty ,Kong
 
 ---
 
-## 并发编程
+## 🚦并发编程
 
 ### 多线程
 
@@ -514,4 +514,14 @@ AbstractQueuedSynchronizer，即队列同步器。它是构建锁或者其他同
 ##### ThreadLocal
 
 线程本地变量，场景: 每个线程一个副本， 不改方法签名静默传参，及时进行清理，存在内存泄漏风险。
+
+### 总结图
+
+<img src="https://github.com/oliverschen/Java-Summarize/blob/main/images/并发编程.png" style="zoom:50%" />
+
+
+
+---
+
+## 🧩框架
 
