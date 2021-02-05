@@ -29,7 +29,7 @@ Java ☃️总结
 
 ---
 
-7. [分布式 & 服务化](https://github.com/oliverschen/Java-Summarize/blob/main/doc/micro-service.md)
+7. [分布式 & 微服务](https://github.com/oliverschen/Java-Summarize/blob/main/doc/micro-service.md)
 
 ---
 
