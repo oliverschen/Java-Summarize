@@ -273,3 +273,245 @@ zuul ,zuul2 ,Spring Cloud Gateway ,openResty ,Kong
 
 ---
 
+## 并发编程
+
+### 多线程
+
+#### 创建
+
+##### 实现 Runnable 接口
+
+run() 方法是线程开启后真正执行的逻辑，跑出异常只能在当前线程中处理，主线程感知不到
+
+##### 继承 Thread 类
+
+Thread 类本身实现了 Runnable 接口，它的 start() 方法调用了 native 方法 start0()，真正开启一个线程。
+
+##### 实现 Callable 接口
+
+V call() throws Exception 方法是开启线程后真正执行的逻辑，它支持返回值，并且可以抛出异常。
+
+#### 线程状态
+
+1. Thread.sleep(long millis)，一定是**当前线程调用**此方法，当前线程进入 `TIMED_WAITING` 状态，但**不释放对象锁**，millis 后线程自动苏醒进入就绪状态。作用：给其它线程执行机会的最佳方式。
+
+2. Thread.yield()，一定是**当前线程调用**此方法，当前线程放弃获取的 CPU 时间片，但**不释放锁资源**，由运行状态变为 `RAEDY`状态，让 OS 再次选择线程。作用：让相同优先级的线程轮流执行，但并不保证一定会轮流执行。实际中**无法保证 yield() 达到让步目的**，因为让步的线程还有可能被线程调度程序再次选中。Thread.yield() 不会导致阻塞。该方法与 sleep() 类似，只是不能由用户指定暂停多长时间。
+
+3. t.join()/t.join(long millis)，当前线程里调用其它线程 t 的 join 方法，当前线程进入`WAITING/TIMED_WAITING` 状态，当前线程**不会释放已经持有的对象锁**。线程 t 执行完毕或者 millis 时间到，当前线程进入 `READY` 状态。
+
+4. obj.wait()，**当前线程调用对象的** wait() 方法，当前线程**释放对象锁**，进入等待队列。依靠 notify()/notifyAll() 唤醒或者 wait(long timeout) timeout 时间到自动唤醒。
+
+5. obj.notify()， 唤醒在此对象监视器上等待的单个线程，选择是任意性的。notifyAll() 唤醒在此对象监视器上等待的所有线程。
+
+##### Java 线程生命周期
+
+<img src="https://cdn.nlark.com/yuque/0/2021/png/2731471/1612507186369-2efb0dea-f3c5-40a8-8c60-7a6f0e5f8522.png" style="zoom:50%" />
+
+#### 中断和异常
+
+1. 线程内部自己处理异常，不溢出到外层。
+
+2. 如果线程被 Object.wait, Thread.join 和 Thread.sleep 三种方法之一阻塞，此时调用该线程的 interrupt() 方法，那么该线程将抛出一个 InterruptedException 中断异常（该线程必须事先预备好处理此异常），从而提早地终结被阻塞状态。如果线程没有被阻塞，这时调用interrupt() 将不起作用，直到执行到 wait(),sleep(),join() 时,才马上会抛出 InterruptedException。
+
+3. 如果是计算密集型的操作：分段处理，每个片段检查一下状态，是不是要终止。
+
+#### 并发性质
+
+##### 原子性
+
+原子操作，注意跟事务 ACID 里原子性的区别与联系,对基本数据类型的变量的读取和赋值操作是原子性操作，即这些操作是不可被中断的，
+
+要么执行，要么不执行。
+
+##### 可见性
+
+对于可见性，Java 提供了 volatile 关键字来保证可见性。当一个共享变量被 volatile 修饰时，它会保证修改的值会立即被更新到主存，当有其他线程需要读取时，它会去内存中读取新值。另外，通过 synchronized 和 Lock 也能够保证可见性，synchronized 和 Lock 能保证同一时刻只有一个线程获取锁然后执行同步代码，并且在释放锁之前会将对变量的修改刷新到主存当中。**volatile 并不能保证原子性。**
+
+##### 有序性
+
+Java 允许编译器和处理器对指令进行重排序，但是重排序过程不会影响到单线程程序的执行，却会影响到多线程并发执行的正确性。可以通过 volatile 关键字来保证一定的“有序性”（synchronized 和 Lock也可以）。
+
+##### happens-before 原则（先行发生原则）
+
+1. 程序次序规则：一个线程内，按照代码先后顺序
+
+2. 锁定规则：一个 unLock 操作先行发生于后面对同一个锁的 lock 操作
+
+3. volatile 变量规则：对一个变量的写操作先行发生于后面对这个变量的读操作
+
+4. 传递规则：如果操作 A 先行发生于操作 B，而操作 B 又先行发生于操作 C，则可以得出 A 先于 C
+
+5. 线程启动规则：Thread 对象的 start() 方法先行发生于此线程的每个一个动作
+
+6. 线程中断规则：对线程 interrupt() 方法的调用先行发生于被中断线程的代码检测到中断事件的发生
+
+7. 线程终结规则：线程中所有的操作都先行发生于线程的终止检测，我们可以通过 Thread.join() 方法结束、Thread.isAlive() 的返回值手段检测到线程已经终止执行
+
+8. 对象终结规则：一个对象的初始化完成先行发生于他的 finalize() 方法的开始
+
+### 线程池
+
+#### 结构
+
+1. Excutor: 执行者 – 顶层接口
+
+2. ExcutorService: 接口 API
+   1. ThreadPoolExecutor：普通线程池
+   2. ScheduledThreadPoolExecutor：任务线程池
+
+3. ThreadFactory: 线程工厂
+
+4. Excutors: 工具类
+
+#### 线程池参数
+
+##### 缓冲队列
+
+BlockingQueue 是**双缓冲队列**。BlockingQueue 内部使用两条队列，允许两个线程同时向队列一个存储，一个取出操作。在保证并发安全的同时，提高了队列的存取效率。
+
+1. ArrayBlockingQueue:规定大小的 BlockingQueue，其构造必须指定大小。其所含的对象是 FIFO 顺序排序的。
+
+2. LinkedBlockingQueue:大小不固定的 BlockingQueue，若其构造时指定大小，生成的 BlockingQueue 有大小限制，不指定大小，其大小有 Integer.MAX_VALUE 来决定。其所含的对象是 FIFO 顺序排序的。
+
+3. PriorityBlockingQueue:类似于 LinkedBlockingQueue，但是其所含对象的排序不是 FIFO，而是依据对象的自然顺序或者构造函数的 Comparator 决定。
+
+4. SynchronizedQueue:特殊的 BlockingQueue，对其的操作必须是放和取交替完成。
+
+##### 拒绝策略
+
+1. ThreadPoolExecutor.AbortPolicy:丢弃任务并抛出 RejectedExecutionException 异常。
+
+2. ThreadPoolExecutor.DiscardPolicy：丢弃任务，但是不抛出异常。
+
+3. ThreadPoolExecutor.DiscardOldestPolicy：丢弃队列最前面的任务，然后重新提交被拒绝的任务
+
+4. ThreadPoolExecutor.CallerRunsPolicy：由调用线程（提交任务的线程）处理该任务
+
+##### 创建线程池方法
+
+###### newSingleThreadExecutor
+
+创建一个单线程的线程池。这个线程池只有一个线程在工作，也就是相当于单线程串行执行所有任务。如果这个唯一的线程因为异常结束，那么会有一个新的线程来替代它。此线程池保证所有任务的执行顺序按照任务的提交顺序执行。
+
+###### newFixedThreadPool
+
+创建固定大小的线程池。每次提交一个任务就创建一个线程，直到线程达到线程池的最大大小。线程池的大小一旦达到最大值就会保持不变，如果某个线程因为执行异常而结束，那么线程池会补充一个新线程。
+
+###### newCachedThreadPool
+
+创建一个可缓存的线程池。如果线程池的大小超过了处理任务所需要的线程，那么就会回收部分空闲（60秒不执行任务）的线程，当任务数增加时，此线程池又可以智能的添 加新线程来处理任务。此线程池不会对线程池大小做限制，线程池大小完全依赖于操作系统（或者说 JVM）能够创建的最大线程大小。
+
+###### newScheduledThreadPool
+
+创建一个大小无限的线程池。此线程池支持定时以及周期性执行任务的需求。
+
+### JUC
+
+#### 常用特性
+
+1. 锁机制类 Locks : Lock, Condition, ReadWriteLock
+
+2. 原子操作类 Atomic : AtomicInteger
+
+3. 线程池相关类 Executer : Future, Callable, Executor
+
+4. 信号量三组工具类 Tools : CountDownLatch, CyclicBarrier, Semaphore
+
+5. 并发集合类 Collections : CopyOnWriteArrayList, ConcurrentMap
+
+#### 锁
+
+##### synchronized 问题
+
+1. 同步块的阻塞无法中断（不能 Interruptibly） 
+
+2. 同步块的阻塞无法控制超时（无法自动解锁）
+
+3. 同步块无法异步处理锁（即不能立即知道是否可以拿到锁）
+
+4. 同步块无法根据条件灵活的加锁解锁（即只能跟同步块范围一致）
+
+##### Lock
+
+1. 使用方式灵活可控
+
+2. 性能开销小
+
+3. 锁工具包: java.util.concurrent.locks
+
+##### 用锁的最佳实践
+
+Doug Lea《Java 并发编程：设计原则与模式》一书中，推荐的三个用锁的最佳实践，它们分别是：
+
+1. 永远只在更新对象的成员变量时加锁
+
+2. 永远只在访问可变的成员变量时加锁
+
+3. 永远不在调用其他对象的方法时加锁
+
+秦老师总结-最小使用锁：
+
+1. 降低锁范围：锁定代码的范围/作用域
+
+2. 细分锁粒度：讲一个大锁，拆分成多个小锁
+
+#### 原子类
+
+##### 无锁技术
+
+无锁技术的底层实现原理
+
+1. Unsafe API - Compare-And-Swap
+
+2. CPU 硬件指令支持: CAS 指令
+
+核心实现原理：
+
+1. volatile 保证读写操作都可见（注意不保证原子）
+
+2. 使用 CAS 指令，作为乐观锁实现，通过自旋重试保证写入
+
+并发压力跟锁性能的关系
+
+1. 压力非常小，性能本身要求就不高；
+
+2. 压力一般的情况下，无锁更快，大部分都一次写入；
+
+3. 压力非常大时，自旋导致重试过多，资源消耗很大。
+
+#### 工具类
+
+##### AQS
+
+AbstractQueuedSynchronizer，即队列同步器。它是构建锁或者其他同步组件的基础（如Semaphore、CountDownLatch、ReentrantLock、ReentrantReadWriteLock），是JUC并发包中的核心基础组件。抽象队列式的同步器，两种资源共享方式: 独占 | 共享，子类负责实现公平 OR 非公平
+
+##### Semaphore
+
+准入数量 N，N =1 则等价于独占锁。场景：同一时间控制并发线程数
+
+##### CountdownLatch
+
+使用**减数**操作实现。场景：Master 线程等待 Worker 线程把任务执行完
+
+##### CyclicBarrier
+
+使用**加数**操作实现。场景: 任务执行到一定阶段, 等待其他任务对齐。
+
+#### 线程安全容器
+
+##### CopyOnWriteArrayList
+
+读写分离，最终一致
+
+1. 写加锁，保证不会写混乱
+
+2. 写在一个 Copy 副本上，而不是原始数据上（GC young 区用复制，old 区用本区内的移动）
+
+##### ConcurrentHashMap
+
+采用了**CAS + synchronized**来保证线程安全。
+
+##### ThreadLocal
+
+线程本地变量，场景: 每个线程一个副本， 不改方法签名静默传参，及时进行清理，存在内存泄漏风险。
+
