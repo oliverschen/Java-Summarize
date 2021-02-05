@@ -25,11 +25,11 @@ Java ☃️总结
 
 ---
 
-6. [分库分表]()
+6. [分库分表](https://github.com/oliverschen/Java-Summarize/blob/main/doc/分库分表.md)
 
 ---
 
-7. [分布式 & 服务化]()
+7. [分布式 & 服务化](https://github.com/oliverschen/Java-Summarize/blob/main/doc/micro-service.md)
 
 ---
 
