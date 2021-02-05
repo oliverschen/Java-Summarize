@@ -33,15 +33,15 @@ Java ☃️总结
 
 ---
 
-8. [分布式缓存]()
+8. [分布式缓存](https://github.com/oliverschen/Java-Summarize/blob/main/doc/cache.md)
 
 ---
 
-9. [分布式消息]()
+9. [分布式消息](https://github.com/oliverschen/Java-Summarize/blob/main/doc/mq.md)
 
 ---
 
-10. [总结]()
+10. [总结](https://github.com/oliverschen/Java-Summarize/blob/main/doc/summary.md)
 
 ---
 
