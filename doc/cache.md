@@ -119,5 +119,5 @@ noeviction：不会剔除任何数据，拒绝所有写入操作并返回客户�
 
 ### 总结图
 
-<img src="" style="zoom:50%" />
+<img src="https://github.com/oliverschen/Java-Summarize/blob/main/images/cache.png" style="zoom:50%" />
 
