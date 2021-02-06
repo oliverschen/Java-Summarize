@@ -269,4 +269,4 @@ Spring Cloud是一系列框架的有序集合。 它利用Spring Boot的开发�
 
 ### 总结图
 
-<img src="" style="zoom:50%" />
+<img src="https://github.com/oliverschen/Java-Summarize/blob/main/images/分布式%26微服务.png" style="zoom:50%" />
