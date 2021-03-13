@@ -1,0 +1,9 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÍÎÆ¥ùÿÿÿÿ8¬ËŠšß.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(þ§†¿úÿÿÿÿ8§Øú£ß.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(á¾¶ã8ûì½šß.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(á¾¶ã8ÐÍ¾šß.
+Z	java:S106&"9Replace this use of System.out or System.err by a logger.( ¢ßÿûÿÿÿÿ8“æ‘¤ß.
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(¥ë§ñÿÿÿÿÿ8Ò¸„¤ß.
+i
+java:S1192"GDefine a constant instead of duplicating this literal " lazy:" 3 times.(þ§†¿úÿÿÿÿ8§Øú£ß.

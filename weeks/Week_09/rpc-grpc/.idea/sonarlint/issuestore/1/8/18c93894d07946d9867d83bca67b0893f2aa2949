@@ -1,0 +1,94 @@
+
+?
+java:S1185…"(Remove this method to simply inherit it.(¿¸Ú©
+D
+java:S1199Ú"-Extract this nested code block into a method.(ò‘
+g	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß”â¢
+g	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+o
+java:S2975Ú"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+E
+java:S1940á")Use the opposite operator ("==") instead.(«‹¦œøÿÿÿÿ
+]
+java:S1126"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+@
+java:S1940Â	")Use the opposite operator ("==") instead.(¦ÁÕ“
+K
+java:S1481Ú"4Remove this unused "from_bitField0_" local variable.(ÆÓ¡€
+D
+java:S1185ï"(Remove this method to simply inherit it.(ÑÍ“Ëûÿÿÿÿ
+D
+java:S1199Õ"-Extract this nested code block into a method.(­Ó–Ô
+j	java:S116¥"ORename this field "age_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à”Åšÿÿÿÿÿ
+p
+java:S2293Ã	"YReplace the type specification in this constructor call with the diamond operator ("<>").(×‹Õ
+u
+java:S1488"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+j	java:S116—"ORename this field "msg_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×Ğ…ùÿÿÿÿ
+k	java:S116Ó"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+C
+java:S1199H"-Extract this nested code block into a method.(­Ó–Ô
+k	java:S116Õ"PRename this field "code_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÚÊùÿÿÿÿ
+s
+java:S3077—"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(×Ğ…ùÿÿÿÿ
+I
+java:S1199à"-Extract this nested code block into a method.(­ƒíéşÿÿÿÿ
+u
+java:S1488Œ"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+?
+java:S1185ÿ"(Remove this method to simply inherit it.(§ß—¡
+u
+java:S2293â"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÛñÀºûÿÿÿÿ
+k	java:S116»"PRename this field "user_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ŞÔıÿÿÿÿ
+n
+java:S3776”"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÕÅ¯Øúÿÿÿÿ
+I
+java:S1199é"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+H
+java:S1199M"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+k	java:S116¿	"PRename this field "user_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ÈšÑúÿÿÿÿ
+Z
+java:S1854Ú"CRemove this useless assignment to local variable "from_bitField0_".(ÆÓ¡€
+D
+java:S1185ä"(Remove this method to simply inherit it.(Ã•Œƒüÿÿÿÿ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ°‡ıÿÿÿÿ
+?	java:S108²")Either remove or fill this block of code.(º„ç½
+?
+java:S1185î"(Remove this method to simply inherit it.(§ß—¡
+?
+java:S1185ô"(Remove this method to simply inherit it.(¿¸Ú©
+k	java:S116"PRename this field "code_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÚÊùÿÿÿÿ
+B
+java:S1948—"&Make "msg_" transient or serializable.(×Ğ…ùÿÿÿÿ
+r	java:S116É	"WRename this field "userBuilder_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó¢ËÀûÿÿÿÿ
+u
+java:S2293¤"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ú¶”Æşÿÿÿÿ
+J
+java:S1172	"/Remove this unused method parameter "registry".(•óÊõÿÿÿÿÿ
+B
+java:S1452"&Remove usage of generic wildcard type.(Ôîùÿÿÿÿ
+D
+java:S1185é"(Remove this method to simply inherit it.(»¤Å“ûÿÿÿÿ
+
+java:S4144ñ"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 472.(­ğúûÿÿÿÿ
+D
+java:S1185Ú"(Remove this method to simply inherit it.(Îõ¾Òûÿÿÿÿ
+]
+java:S1126¦"AReplace this if-then-else statement by a single return statement.(®Èäîÿÿÿÿÿ
+i	java:S116n"ORename this field "age_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à”Åšÿÿÿÿÿ
+D
+java:S1185ë"(Remove this method to simply inherit it.(Îõ¾Òûÿÿÿÿ
+o
+java:S2975ë"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+€
+java:S4144İ"dUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 1476.(ø‹–ôøÿÿÿÿ
+D
+java:S1185õ"(Remove this method to simply inherit it.(Ã•Œƒüÿÿÿÿ
+D
+java:S1185Ş"(Remove this method to simply inherit it.(ÑÍ“Ëûÿÿÿÿ
+D
+java:S1185ú"(Remove this method to simply inherit it.(»¤Å“ûÿÿÿÿ
+e	java:S116ó"ORename this field "msg_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş£»
+z
+java:S4144Æ"\Update this method so that its implementation is not identical to "getUserList" on line 703.(ªÙ“ 8÷“š“ó.

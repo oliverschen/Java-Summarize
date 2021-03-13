@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: read-write # 读写分离
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml

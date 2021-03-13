@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.oliverschen.mapper.OrderMapper">
+    <resultMap id="orderList" type="Order">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+    </resultMap>
+
+    <insert id="insert" parameterType="Order">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID();
+        </selectKey>
+        insert into `order`(`id`,`user_id`,`create_time`,`update_time`,`price`)
+        values (#{id},#{userId},#{createTime},#{updateTime},#{price});
+    </insert>
+
+    <select id="get" parameterType="java.lang.Long" resultMap="orderList">
+        select * from `order` where `id` = #{id}
+    </select>
+
+    <update id="update" parameterType="Order">
+        update `order` set status = #{status} where id=#{id}
+    </update>
+
+    <delete id="del" parameterType="java.lang.Long">
+        delete from `order` where id=#{id}
+    </delete>
+
+</mapper>

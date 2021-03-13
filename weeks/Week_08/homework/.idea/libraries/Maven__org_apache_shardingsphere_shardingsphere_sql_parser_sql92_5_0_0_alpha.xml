@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.shardingsphere:shardingsphere-sql-parser-sql92:5.0.0-alpha">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/develop/maven/repo/org/apache/shardingsphere/shardingsphere-sql-parser-sql92/5.0.0-alpha/shardingsphere-sql-parser-sql92-5.0.0-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/develop/maven/repo/org/apache/shardingsphere/shardingsphere-sql-parser-sql92/5.0.0-alpha/shardingsphere-sql-parser-sql92-5.0.0-alpha-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/develop/maven/repo/org/apache/shardingsphere/shardingsphere-sql-parser-sql92/5.0.0-alpha/shardingsphere-sql-parser-sql92-5.0.0-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

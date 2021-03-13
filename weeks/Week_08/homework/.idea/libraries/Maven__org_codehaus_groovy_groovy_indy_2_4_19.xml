@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.codehaus.groovy:groovy:indy:2.4.19">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/develop/maven/repo/org/codehaus/groovy/groovy/2.4.19/groovy-2.4.19-indy.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/develop/maven/repo/org/codehaus/groovy/groovy/2.4.19/groovy-2.4.19-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/develop/maven/repo/org/codehaus/groovy/groovy/2.4.19/groovy-2.4.19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

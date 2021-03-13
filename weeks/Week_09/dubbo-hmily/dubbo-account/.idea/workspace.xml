@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6609dfe6-a6a9-4953-8e97-69ce899815f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account-api/src/main/java/com/github/oliverschen/api/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account-api/src/main/java/com/github/oliverschen/entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account/src/main/java/com/github/oliverschen/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account/src/main/java/com/github/oliverschen/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account/src/main/resources/hmily.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-order/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-order/src/main/java/com/github/oliverschen/DubboOrderApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-order/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-order/src/main/resources/hmily.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-order/src/test/java/com/github/oliverschen/DubboOrderApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-hmily/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/oliverschen/DubboTccApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account/src/main/java/com/github/oliverschen/DubboTccApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/oliverschen/DubboTccApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-hmily/dubbo-account/src/test/java/com/github/oliverschen/DubboTccApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="$USER_HOME$/develop/maven/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1nZG7h4hgVRcrZ2dMevDRR8b1gR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="DubboTccApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="dubbo-tcc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.oliverschen.DubboTccApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6609dfe6-a6a9-4953-8e97-69ce899815f8" name="Default Changelist" comment="" />
+      <created>1611590033612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611590033612</updated>
+      <workItem from="1611590042166" duration="1328000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="126" y="122" key="new project wizard" timestamp="1611591298324">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="126" y="122" key="new project wizard/0.25.1440.875@0.25.1440.875" timestamp="1611591298324" />
+  </component>
+</project>

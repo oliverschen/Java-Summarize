@@ -1,0 +1,12 @@
+
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.(—­Ù×üÿÿÿÿ8éËğó.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÃƒìÜşÿÿÿÿ
+X
+java:S39853"6Remove this unused private "RandomLoadBalancer" class.(ÙÛĞûÿÿÿÿ8¬ùí™ó.
+X	java:S125'"<This block of commented-out lines of code should be removed.(£’ À8¬ùí™ó.
+M
+java:S3985;"0Remove this unused private "CuicuiFilter" class.(£½œæ8¬ùí™ó.
+J
+java:S3985,"-Remove this unused private "TagRouter" class.(ÉØºÁ8¬ùí™ó.
+N	java:S106$"9Replace this use of System.out or System.err by a logger.(Áï¡Ó
+Q	java:S125)"<This block of commented-out lines of code should be removed.(ÚùÊ

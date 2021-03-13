@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="308af84c-dba4-4ffa-89a7-3b89e91f7662" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Week_11/redis/src/main/java/com/github/oliverschen/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week_11/redis/src/main/java/com/github/oliverschen/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week_11/redis/src/main/java/com/github/oliverschen/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week_11/redis/src/main/java/com/github/oliverschen/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week_11/redis/src/main/java/com/github/oliverschen/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week_11/redis/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_11/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_11/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_11/redis/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_11/redis/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="$USER_HOME$/develop/maven/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1nHUr4gWKnyNBlr7vXCBPVYWf8w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="DynamicSsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="dynamic-ss" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.oliverschen.dynamic.ss.DynamicSsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="308af84c-dba4-4ffa-89a7-3b89e91f7662" name="Default Changelist" comment="" />
+      <created>1611046704872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611046704872</updated>
+      <workItem from="1611046710484" duration="419000" />
+      <workItem from="1612164349109" duration="77000" />
+      <workItem from="1612164966490" duration="48000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

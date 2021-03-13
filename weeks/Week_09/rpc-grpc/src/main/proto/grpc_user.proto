@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_package = "com.github.oliverschen.grpc.rpc";
+option java_outer_classname = "UserRpcProto";
+
+import "message.proto";
+
+message AgeRequest {
+    int32 age = 1;
+}
+
+message UserResponse {
+    int32 code = 1;
+    string msg = 2;
+    repeated User user = 3;
+}
+
+service UserRpcService {
+    rpc listByAge(AgeRequest) returns(UserResponse);
+}
