@@ -4,7 +4,7 @@
 
 #### 1. 使用 Java 中的动态代理，实现一个简单的 AOP
 
-通过动态代理，实现对指定方法进行前后拦截，[代码地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_05/homework/jdkproxy/src/main/java/com/github/oliverschen/proxy)
+通过动态代理，实现对指定方法进行前后拦截，[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_05/homework)
 
 代理类	
 
@@ -83,7 +83,7 @@ public class OrderServiceImpl implements IOrderService {
 
 #### 2. 写代码实现 Spring bean 的装配，方式越多越好
 
-总体使用了 XML 和 注解两种方式进行装配，[代码地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_05/homework/spring-bean/src/main/java/com/github/oliverschen/springbean)
+总体使用了 XML 和 注解两种方式进行装配，[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_05/homework/spring-bean)
 
 1. 使用 XML <beans> 标签，用 ClassPathXmlApplicationContext 进行加载 XML 解析装配获取bean
 2. 使用 AnnotationConfigApplicationContext 注解扫描方式，加载 @Componet 注解装配 bean
@@ -91,7 +91,7 @@ public class OrderServiceImpl implements IOrderService {
 
 #### 3. 实现一个 Spring XML 自定义配置，配置一组 bean.
 
-在 application.xml 中进行配置 bean,具体[代码地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_05/homework/spring-bean/src/main/resources)
+在 application.xml 中进行配置 bean,具体[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_05/homework/spring-bean)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -129,12 +129,12 @@ public class OrderServiceImpl implements IOrderService {
 
 #### 给前面课程提供的 Student 实现自动配置和 starter
 
-用 spring.factories 的方式加载配置项，在配置项中装配需要的 bean，具体[代码](https://github.com/oliverschen/JAVA-000/tree/main/Week_05/homework/boot-starter)
+用 spring.factories 的方式加载配置项，在配置项中装配需要的 bean，具体[代码](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_05/homework/boot-starter)
 
 1. 先创建 boot-starter 的模块作为基础模块，改模块自动加载需要的实例对象
 2. 将 boot-starter 配置在需要的项目中，进行自动配置使用
 
-在另外一个项目中测试，[代码地址](https://github.com/oliverschen/JAVA-000/blob/main/Week_05/homework/boot-bean/src/test/java/com/github/oliverschen/bootbean/BootBeanApplicationTests.java)
+在另外一个项目中测试，[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_05/homework/boot-starter)
 
 ```java
 @SpringBootTest
@@ -165,9 +165,9 @@ class BootBeanApplicationTests {
 
 #### 研究一下 JDBC 接口和数据库连接池，掌握它们的设计和用法
 
-[代码地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_05/homework/boot-bean/src/main/java/com/github/oliverschen/bootbean/jdbc)
+[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_05/homework/boot-starter)
 
-单例模式[代码地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_05/homework/boot-bean/src/main/java/com/github/oliverschen/bootbean/singleton)，总的来说如果项目中框架（Spring）提供单例实现的话，尽量依赖框架机制实现，保证程序安全可靠。
+单例模式[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_05/homework/boot-starter)，总的来说如果项目中框架（Spring）提供单例实现的话，尽量依赖框架机制实现，保证程序安全可靠。
 
 
 
