@@ -4,7 +4,7 @@
 
 #### Guava/Stream/Lambda 使用
 
-Stream 和 Lambda 在工作中经常使用，目前业务代码只要不是老旧代码都是用的是 java8 方式来处理的，Guava 没有使用过，练习的[代码地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_06/homework/src/main/java/com/github/oliverschen/homework/guava)
+Stream 和 Lambda 在工作中经常使用，目前业务代码只要不是老旧代码都是用的是 java8 方式来处理的，Guava 没有使用过，练习的[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_06/homework)
 
 #### 在工作中如何用设计模式解决问题？
 
