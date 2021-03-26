@@ -197,7 +197,7 @@ keyspace_hits / (keyspace_hits + keyspace_misses)
 >
 > 3）将示例中的spring集成Lettuce改成jedis或redisson。 
 
-redisson 和 redis 包版本需要注意，容易出现版本不兼容现象。[redis](https://github.com/oliverschen/JAVA-000/tree/main/Week_11)
+redisson 和 redis 包版本需要注意，容易出现版本不兼容现象。[redis](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_11/redis)
 
 ### 4.（必做）基于Redis封装分布式数据操作
 
