@@ -126,7 +126,7 @@ spring:
 1. 默认配置从库，定义注解，给需要切库的方法标记注解
 2. 定义 AOP 切面，根据注解设置对应数据库的 key
 
-代码地址[dynamic-source](https://github.com/oliverschen/JAVA-000/tree/main/Week_07/dynamic-source)
+代码地址[dynamic-source](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_07/dynamic-source)
 
 3、（必做）读写分离-数据库框架版本2.0
 
@@ -160,7 +160,7 @@ spring:
         show: true
 ```
 
-使用 sharingshpere 实现数据库读写分离操作，具体代码地址 [dynamic-ss](https://github.com/oliverschen/JAVA-000/tree/main/Week_07/dynamic-ss)
+使用 sharingshpere 实现数据库读写分离操作，具体代码地址 [dynamic-ss](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_07/dynamic-ss)
 
 
 
