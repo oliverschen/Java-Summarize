@@ -106,5 +106,5 @@ mysql> show databases;
 
 #### 基于hmily TCC或ShardingSphere的Atomikos XA实现一个简单的分布式 事务应用demo（二选一），提交到github。
 
-代码[地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_08/homework)
+代码[地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_08/homework)
 
