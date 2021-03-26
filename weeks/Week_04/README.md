@@ -2,7 +2,7 @@
 
 （必做）思考有多少种方式，在main函数启动一个新线程或线程池，异步运行一个方法，拿到这个方法的返回值后，退出主线程？
 
-以下[代码地址](https://github.com/oliverschen/JAVA-000/tree/main/Week_04/homework/src/main/java/com/github/oliverschen)
+以下[代码地址](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_04/homework/src/main/java/com/github/oliverschen)
 
 基础抽象类
 
@@ -330,4 +330,4 @@ public abstract class AbstractBase {
 
 多线程和并发思维导图
 
-![多线程和并发](https://github.com/oliverschen/JAVA-000/blob/main/Week_04/多线程%26并发.png)
+![多线程和并发](https://github.com/oliverschen/Java-Summarize/blob/main/weeks/Week_04/多线程%26并发.png)
