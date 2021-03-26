@@ -9,7 +9,7 @@
 1. 使用 gRPC maven 插件按照 protobuf 源文件生成 gRPC 相关的 Java 文件。
 2. 将生成好的文件放到对应的类路径下，完成 client 端和 sever 端代码
 
-代码地址[rpc-grpc](https://github.com/oliverschen/JAVA-000/tree/main/Week_09/rpc-grpc)
+代码地址[rpc-grpc](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_09/rpc-grpc)
 
 ### RPC
 
@@ -53,7 +53,7 @@ RPC：远程过程调用，简单来说就是“像调用本地方法一样调�
 
 用 netty 发送 http 请求实现
 
-代码地址[rpcfx](https://github.com/oliverschen/JAVA-000/tree/main/Week_09/rpcfx)
+代码地址[rpcfx](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_09/rpcfx)
 
 ## 第18 课
 
@@ -67,7 +67,7 @@ RPC：远程过程调用，简单来说就是“像调用本地方法一样调�
 
 ​	3）设计账户表，冻结资产表，实现上述两个本地事务的分布式事务。
 
-代码地址[dubbo+hmily](https://github.com/oliverschen/JAVA-000/tree/main/Week_09/dubbo-hmily)
+代码地址[dubbo+hmily](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_09/dubbo-hmily)
 
 使用多数据源的方式完成分布式事务模拟，启动 dubbo-account 服务
 
