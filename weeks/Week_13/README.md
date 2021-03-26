@@ -252,7 +252,7 @@ public class Consumer {
 2021-02-16 01:06:14.826  INFO 44501 --- [ntainer#0-0-C-1] c.github.oliverschen.mq.kafka.Consumer   : record::::ConsumerRecord(topic = jihe, partition = 0, leaderEpoch = 0, offset = 1, CreateTime = 1613408774783, serialized key size = -1, serialized value size = 252, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = {"id":1613408774782,"msg":"消息 ：1","sendTime":{"dayOfWeek":"TUESDAY","dayOfYear":47,"year":2021,"month":"FEBRUARY","nano":782000000,"monthValue":2,"dayOfMonth":16,"hour":1,"minute":6,"second":14,"chronology":{"calendarType":"iso8601","id":"ISO"}}})
 ```
 
-代码地址[mq-all](https://github.com/oliverschen/JAVA-000/tree/main/Week_12)
+代码地址[mq-all](https://github.com/oliverschen/Java-Summarize/tree/main/weeks/Week_13/mq-all)
 
 ### 第 26 课作业
 
