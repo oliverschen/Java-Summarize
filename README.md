@@ -40,9 +40,7 @@ Java 体系 ☃️总结
 
 9. [分布式消息](https://github.com/oliverschen/Java-Summarize/blob/main/doc/mq.md)
 
----
 
-10. [总结](https://github.com/oliverschen/Java-Summarize/blob/main/doc/summary.md)
 
 ---
 
