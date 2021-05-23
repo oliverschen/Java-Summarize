@@ -136,7 +136,7 @@
 - [ ]  替换jackson序列化为fastjson或者fst，kryo；
 - [ ]  对项目进行分析和性能调优。
 
-- [ ]  以redis作为基础实现上个模块的自定义rpc的注册中心；
+- [x]  以redis作为基础实现上个模块的自定义rpc的注册中心；
 - [ ]  练习redission的各种功能；
 - [ ]  练习hazelcast的各种功能；
 - [ ]  搭建hazelcast 3节点集群，写入100万数据到一个map，模拟和演示高可用，测试一下性能。
