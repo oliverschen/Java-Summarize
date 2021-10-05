@@ -3,21 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>springcloud</artifactId>
+        <groupId>com.jihe</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.jihe</groupId>
-    <artifactId>jihe-zuul</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>jihe-zuul</name>
-    <description>zuul service</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-    </properties>
+    <artifactId>jihe-zuul</artifactId>
+    <version>${jihe.version}</version>
 
     <dependencies>
         <dependency>
@@ -35,7 +27,6 @@
         <dependency>
             <groupId>com.spring4all</groupId>
             <artifactId>swagger-spring-boot-starter</artifactId>
-            <version>1.7.0.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -55,26 +46,4 @@
             </exclusions>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
