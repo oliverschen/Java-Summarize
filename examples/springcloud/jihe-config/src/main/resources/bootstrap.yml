@@ -1,0 +1,18 @@
+debug: true
+server:
+  port: 9090
+
+spring:
+  application:
+    name: jihe-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/oliverschen/springcloud.git
+          search-paths: /jihe-config/**
+          username:
+          password:
+      # 分支名
+      label: master
+

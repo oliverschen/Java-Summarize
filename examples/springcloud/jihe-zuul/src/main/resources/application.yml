@@ -1,0 +1,40 @@
+
+debug: false
+
+server:
+  port: 9999
+
+spring:
+  application:
+    name: jihe-zuul
+
+# 注册到服务中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+ribbon:
+  eureka:
+    enabled: false
+# 请求服务负载均衡
+jihe-user:
+  ribbon:
+    listOfServers: http://ke.qq.com/,http://www.imooc.com/
+
+zuul:
+  routes:
+    class:
+      serviceId: jihe-user
+      path: /ketang/**
+    baidu:
+      url: http://www.baidu.com
+      path: /baidu/**
+    # 自定义路由
+    api-order:
+      path: /api-order/**
+      serviceId: jihe-order
+    api-user:
+      path: /api-user/**
+      serviceId: jihe-user
+  ignored-services: "*"

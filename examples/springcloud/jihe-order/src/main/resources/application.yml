@@ -1,0 +1,19 @@
+
+debug: false
+
+server:
+  port: 8082
+
+spring:
+  application:
+    name: jihe-order
+
+# 注册到服务中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+# 开启 hystrix
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,18 @@
+
+# 日志
+debug: false
+
+spring:
+  application:
+    name: jihe-eureka
+
+# 服务端口
+server:
+  port: 8080
+
+eureka:
+  client:
+    register-with-eureka: false # 为 true 时注册中心会尝试注册自己，这里关闭。但是集群时需要打开，因为注册中心会相互注册
+    fetch-registry: false # 为 true 时服务中心进行服务检索
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/  # 注册中心地址

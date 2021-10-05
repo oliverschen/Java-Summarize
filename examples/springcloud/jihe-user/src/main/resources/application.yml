@@ -1,0 +1,13 @@
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: jihe-user
+
+# 注册到服务中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/

@@ -1,0 +1,22 @@
+server:
+  port: 9999
+
+registry:
+  addr: localhost:8080
+
+spring:
+  application:
+    name: jihe-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: order-feign
+          uri: http://localhost:8082
+          predicates:
+            # 匹配路径转发
+            - Path=/order-feign/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${registry.addr}/eureka/
