@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/oliverschen/springcloud.git
+          uri: https://github.com/oliverschen/microservice.git
           search-paths: /jihe-config/**
           username:
           password:

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <!--不指定 parent ，防止依赖自己项目的 parent-->
     <groupId>com.jihe</groupId>
-    <artifactId>springcloud</artifactId>
+    <artifactId>microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
