@@ -5,3 +5,9 @@ rpc: dubbo
 config: apollo
 apm: skyworking...
 
+存储：
+hbase,mysql,mongo,redis
+mq:
+kafka,rabbitmq,rocketmq
+
+
