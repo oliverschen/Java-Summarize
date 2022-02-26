@@ -15,6 +15,7 @@
         <module>jihe-order</module>
         <module>jihe-user</module>
         <module>jihe-zuul</module>
+        <module>jihe-reactor</module>
     </modules>
 
     <properties>
@@ -29,6 +30,7 @@
         <netty.version>4.1.63.Final</netty.version>
         <zk.version>3.4.14</zk.version>
         <swagger.version>1.7.0.RELEASE</swagger.version>
+        <mybatis.version>2.2.2</mybatis.version>
     </properties>
 
 
@@ -55,6 +57,12 @@
                 <groupId>com.spring4all</groupId>
                 <artifactId>swagger-spring-boot-starter</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
