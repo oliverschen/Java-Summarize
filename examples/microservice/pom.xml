@@ -15,7 +15,7 @@
         <module>jihe-order</module>
         <module>jihe-user</module>
         <module>jihe-zuul</module>
-        <module>jihe-reactor</module>
+<!--        <module>jihe-reactor</module>-->
     </modules>
 
     <properties>
