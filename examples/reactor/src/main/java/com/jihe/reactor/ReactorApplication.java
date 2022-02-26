@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JiheReactorApplication {
+public class ReactorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JiheReactorApplication.class, args);
+        SpringApplication.run(ReactorApplication.class, args);
     }
 
 }
