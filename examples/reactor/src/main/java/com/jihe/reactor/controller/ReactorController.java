@@ -18,9 +18,9 @@ public class ReactorController {
     private ReactorService reactorService;
 
     @GetMapping("/mono")
-    public Mono<String> getUser() {
+    public Mono<UserVo> getUser() {
         UserVo user = reactorService.getUser();
-        return Mono.just("echo");
+        return Mono.just(user);
     }
 
 
