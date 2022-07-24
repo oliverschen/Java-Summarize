@@ -1,0 +1,4 @@
+
+hbase:
+  zookeeper:
+    quorum: 36c3dbbea905
