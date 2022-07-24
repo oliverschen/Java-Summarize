@@ -1,11 +1,9 @@
 package com.github.oliverschen.util;
 
-import com.github.oliverschen.dto.UserDto;
 import com.github.oliverschen.exception.HbaseException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.hadoop.hbase.Cell;
-import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -47,9 +45,8 @@ public class HbaseUtils {
      *
      * @param tableName    表名
      * @param columnFamily 列族
-     * @param keys         分区集合
      */
-    public boolean createTable(String tableName, List<String> columnFamily, List<String> keys) {
+    public boolean createTable(String tableName, List<String> columnFamily) {
         if (isExists(tableName)) {
             TableName name = TableName.valueOf(tableName);
             Set<ColumnFamilyDescriptor> columnFamilies = columnFamily.stream()
