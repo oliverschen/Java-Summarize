@@ -38,4 +38,11 @@ public class AppTest {
     public void testHbasePut(){
         hbaseUtils.putSingleRow("user_info","1","tf1","name","chenkui");
     }
+
+    @Test
+    public void testHbaseDelete(){
+        boolean result = hbaseUtils.deleteSingleRow("user_info", "1");
+        System.out.println(result);
+    }
+
 }
