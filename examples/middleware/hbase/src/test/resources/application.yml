@@ -1,4 +1,4 @@
-
+# 容器启动的 hbase，quorum 的值是 hbase 容器的 hostname，并且配置在自己开发机器的 hosts 中
 hbase:
   zookeeper:
     quorum: 86151fc55250

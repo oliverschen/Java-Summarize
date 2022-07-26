@@ -36,7 +36,7 @@ public class AppTest {
 
     @Test
     public void testHbasePut(){
-        hbaseUtils.putSingleRow("user_info","1","tf1","name","chenkui");
+        hbaseUtils.putSingleRow("user_info","1","tf1","name","jielun");
     }
 
     @Test
