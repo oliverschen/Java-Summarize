@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
 import java.util.Collections;
 
 /**
@@ -33,5 +32,10 @@ public class AppTest {
     public void testCreateTable() {
         boolean result = hbaseUtils.createTable("user_info", Collections.singletonList("tf1"));
         System.out.println(result);
+    }
+
+    @Test
+    public void testHbasePut(){
+        hbaseUtils.putSingleRow("user_info","1","tf1","name","chenkui");
     }
 }
