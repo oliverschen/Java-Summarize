@@ -47,7 +47,7 @@ public class HbaseUtils {
      * @param columnFamily 列族
      */
     public boolean createTable(String tableName, List<String> columnFamily) {
-        if (isExists(tableName)) {
+        if (!isExists(tableName)) {
             TableName name = TableName.valueOf(tableName);
             Set<ColumnFamilyDescriptor> columnFamilies = columnFamily.stream()
                     .map(item -> ColumnFamilyDescriptorBuilder.newBuilder(item.getBytes()).build()).

@@ -2,4 +2,4 @@
 
 hbase:
   zookeeper:
-    quorum: 36c3dbbea905
+    quorum: 86151fc55250

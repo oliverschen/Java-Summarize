@@ -16,6 +16,7 @@ public enum CommonEnum implements ExceptionInterface {
     TABLE_INSERT_SINGLE_ERROR("H0002", "table insert single data error"),
     TABLE_DELETE_SINGLE_ERROR("H0003", "table delete single data error"),
     TABLE_GET_SINGLE_ERROR("H0004", "table get single data error"),
+    TABLE_IS_EXISTS("H0005", "table is exists"),
 
 
     ;
