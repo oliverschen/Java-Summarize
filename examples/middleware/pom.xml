@@ -18,6 +18,7 @@
         <module>hbase</module>
         <module>kafka</module>
         <module>es</module>
+        <module>mongo</module>
     </modules>
 
 

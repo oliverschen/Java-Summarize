@@ -60,3 +60,26 @@ docker-compose down ## 停止并删除
 
 #### 注意
 kafka bash 执行命令时 zk 连接要用环境配置中的 zookeeper:2181，不然连接不了
+
+## es
+### 安装
+#### es
+```bash
+docker pull elasticsearch:7.2.0
+```
+```bash
+docker run --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -d elasticsearch:7.2.0
+```
+ik 分词器
+```bash
+docker exec -it es bash
+cd bin
+./elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.2.0/elasticsearch-analysis-ik-7.2.0.zip
+```
+#### kibana
+```bash
+docker pull kibana:7.2.0
+```
+```bash
+docker run --name kibana -d --restart always --link es:elasticsearch -p 5601:5601 kibana:7.2.0
+```
