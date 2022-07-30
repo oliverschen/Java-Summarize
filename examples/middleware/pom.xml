@@ -17,6 +17,7 @@
     <modules>
         <module>hbase</module>
         <module>kafka</module>
+        <module>es</module>
     </modules>
 
 
