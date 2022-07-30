@@ -1,4 +1,4 @@
-package com.github.oliverschen.config;
+package com.github.oliverschen.sender;
 
 
 import lombok.Getter;
