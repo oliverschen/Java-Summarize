@@ -36,7 +36,7 @@ services:
       - "9092:9092"
     environment:
       KAFKA_ADVERTISED_HOST_NAME: localhost   ## 修改:宿主机IP
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181       ## 卡夫卡运行是基于zookeeper的
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181       ## kafka 运行是基于zookeeper的
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_LOG_RETENTION_HOURS: 120
       KAFKA_MESSAGE_MAX_BYTES: 10000000
@@ -57,3 +57,6 @@ docker-compose up -d ## 启动
 docker-compose stop ## 停止
 docker-compose down ## 停止并删除
 ```
+
+#### 注意
+kafka bash 执行命令时 zk 连接要用环境配置中的 zookeeper:2181，不然连接不了
