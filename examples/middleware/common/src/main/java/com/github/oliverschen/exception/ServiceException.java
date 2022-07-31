@@ -9,16 +9,16 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class HbaseException extends RuntimeException {
+public class ServiceException extends RuntimeException {
 
     private String code;
     private String msg;
 
-    public HbaseException() {
+    public ServiceException() {
         super();
     }
 
-    public HbaseException(ExceptionInterface e) {
+    public ServiceException(ExceptionInterface e) {
         super(e.getCode());
         this.code = e.getCode();
         this.msg = e.getMsg();

@@ -19,6 +19,9 @@ public enum CommonEnum implements ExceptionInterface {
     TABLE_IS_EXISTS("H0005", "table is exists"),
 
 
+    INDEX_CREATE_ERROR("E0000", "index create error"),
+
+
     ;
     private final String code;
     private final String msg;
