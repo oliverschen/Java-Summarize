@@ -1,6 +1,7 @@
-package com.github.oliverschen.util;
+package com.github.oliverschen.service;
 
-import com.github.oliverschen.exception.HbaseException;
+
+import com.github.oliverschen.exception.ServiceException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.hadoop.hbase.Cell;
@@ -8,7 +9,7 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -17,9 +18,10 @@ import java.util.stream.Collectors;
 
 import static com.github.oliverschen.constant.CommonEnum.*;
 
+
 @Slf4j
-@Component
-public class HbaseUtils {
+@Service
+public class HbaseService {
 
     @Autowired
     private Admin admin;
@@ -35,7 +37,7 @@ public class HbaseUtils {
             return admin.tableExists(name);
         } catch (IOException e) {
             log.error("HbaseUtils#isExists: table not found");
-            throw new HbaseException(TABLE_NOT_FOUND);
+            throw new ServiceException(TABLE_NOT_FOUND);
         }
     }
 
@@ -60,10 +62,10 @@ public class HbaseUtils {
                 admin.createTable(descriptor);
             } catch (IOException e) {
                 log.error("HbaseUtils#createTable error:", e);
-                throw new HbaseException(TABLE_CREATE_ERROR);
+                throw new ServiceException(TABLE_CREATE_ERROR);
             }
         }else {
-            throw new HbaseException(TABLE_NOT_FOUND);
+            throw new ServiceException(TABLE_NOT_FOUND);
         }
         return false;
     }
@@ -87,7 +89,7 @@ public class HbaseUtils {
             table.close();
         } catch (IOException e) {
             log.error("HbaseUtils#putSingleRow table not found:", e);
-            throw new HbaseException(TABLE_INSERT_SINGLE_ERROR);
+            throw new ServiceException(TABLE_INSERT_SINGLE_ERROR);
         }
     }
 
@@ -105,7 +107,7 @@ public class HbaseUtils {
             return true;
         } catch (IOException e) {
             log.error("HbaseUtils#deleteSingleRow delete error:", e);
-            throw new HbaseException(TABLE_DELETE_SINGLE_ERROR);
+            throw new ServiceException(TABLE_DELETE_SINGLE_ERROR);
         }
     }
 
@@ -135,7 +137,7 @@ public class HbaseUtils {
             }
         } catch (IOException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | InstantiationException e) {
             log.error("HbaseUtils#getSingleRow get error:", e);
-            throw new HbaseException(TABLE_GET_SINGLE_ERROR);
+            throw new ServiceException(TABLE_GET_SINGLE_ERROR);
         }
         return null;
     }

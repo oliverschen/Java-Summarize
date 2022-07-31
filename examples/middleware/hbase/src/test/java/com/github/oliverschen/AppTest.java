@@ -2,7 +2,7 @@ package com.github.oliverschen;
 
 
 import com.github.oliverschen.dto.UserDto;
-import com.github.oliverschen.util.HbaseUtils;
+import com.github.oliverschen.service.HbaseService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import java.util.Collections;
 public class AppTest {
 
     @Autowired
-    private HbaseUtils hbaseUtils;
+    private HbaseService hbaseUtils;
 
 
     @Test
