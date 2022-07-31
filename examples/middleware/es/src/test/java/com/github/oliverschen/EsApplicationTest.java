@@ -27,8 +27,9 @@ public class EsApplicationTest {
         map.put("name", "xihongshi");
         map.put("age", 12);
         map.put("city", "shenzhen");
-        DocWriteResponse.Result result = esService.createIndex("order_info_his", "1", map);
-        assertEquals(result, DocWriteResponse.Result.CREATED);
+        boolean result = esService.createIndex("lib");
+        assertEquals(result, true);
+
     }
 
 }

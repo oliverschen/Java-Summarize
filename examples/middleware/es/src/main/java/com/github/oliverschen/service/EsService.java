@@ -7,6 +7,8 @@ import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.client.indices.CreateIndexRequest;
+import org.elasticsearch.client.indices.CreateIndexResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,6 +38,17 @@ public class EsService {
             IndexResponse response = esRestHighLevelClient.index(request, RequestOptions.DEFAULT);
             return response.getResult();
          } catch (IOException e) {
+            log.error("EsService.createIndex error:", e);
+            throw new ServiceException(INDEX_CREATE_ERROR);
+        }
+    }
+
+    public boolean createIndex(String index) {
+        CreateIndexRequest request = new CreateIndexRequest(index);
+        try {
+            CreateIndexResponse response = esRestHighLevelClient.indices().create(request, RequestOptions.DEFAULT);
+            return response.isAcknowledged();
+        } catch (IOException e) {
             log.error("EsService.createIndex error:", e);
             throw new ServiceException(INDEX_CREATE_ERROR);
         }
