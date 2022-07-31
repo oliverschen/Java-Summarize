@@ -1,7 +1,7 @@
 package com.github.oliverschen;
 
 
-import com.github.oliverschen.sender.KafkaSender;
+import com.github.oliverschen.config.KafkaSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

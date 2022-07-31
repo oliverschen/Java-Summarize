@@ -1,4 +1,4 @@
-package com.github.oliverschen.sender;
+package com.github.oliverschen.config;
 
 import com.github.oliverschen.domain.KafkaMsg;
 import lombok.extern.slf4j.Slf4j;
