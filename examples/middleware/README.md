@@ -85,3 +85,13 @@ docker pull kibana:7.2.0
 ```bash
 docker run --name kibana -d --restart always --link es:elasticsearch -p 5601:5601 kibana:7.2.0
 ```
+
+#### elasticsearch-head
+```bash
+docker pull mobz/elasticsearch-head:5
+```
+
+```bash
+docker run -d --name es-head -p 9100:9100 \
+mobz/elasticsearch-head:5
+```
