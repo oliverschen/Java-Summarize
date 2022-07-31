@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class EsConfig {
     private String host;
     private Integer port;
-    private Integer connectTimeout;
+    private Integer connectionTimeout;
     private Integer socketTimeout;
 
 
@@ -24,7 +24,7 @@ public class EsConfig {
     public RestHighLevelClient restHighLevelClient() {
         RestClientBuilder builder = RestClient.builder(new HttpHost(host, port))
                 .setRequestConfigCallback(requestConfigBuilder -> requestConfigBuilder
-                        .setConnectTimeout(connectTimeout)
+                        .setConnectTimeout(connectionTimeout)
                         .setSocketTimeout(socketTimeout)
                 );
         return new RestHighLevelClient(builder);

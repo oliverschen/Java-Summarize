@@ -1,0 +1,7 @@
+
+spring:
+  elasticsearch:
+    host: c2045ae6ea50
+    port: 9200
+    connection-timeout: 3000
+    socket-timeout: 5000
