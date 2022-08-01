@@ -1,11 +1,13 @@
 package com.github.oliverschen.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
 @Data
-public class UserEntity {
+@EqualsAndHashCode(callSuper = true)
+public class UserEntity extends BaseEntity {
 
     private String firstName;
     private String lastName;

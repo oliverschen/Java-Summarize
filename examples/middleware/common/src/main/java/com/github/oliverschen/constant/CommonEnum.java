@@ -20,6 +20,8 @@ public enum CommonEnum implements ExceptionInterface {
 
 
     INDEX_CREATE_ERROR("E0000", "index create error"),
+    DOCUMENT_CREATE_ERROR("E0001", "document create error"),
+    DOCUMENT_CREATE_ENTITY_NOT_NULL_ERROR("E0002", "document create error,entity is not null"),
 
 
     ;
